@@ -16,11 +16,11 @@ def vote():
              vote()
  
 def create():
-     A =    input("which voter to register: ")
+     A =    input("which voter to register: ").lower()
      NAME.append(A)
      print(NAME) 
      DB[A] =    0
-     B =    input("do you have more(y/n): ")
+     B =    input("do you have more(y/n): ").lower()
      if B == "y":
          B = 0
          create()
