@@ -18,7 +18,6 @@ else:
 #print(os.getcwd())
 #print(os.listdir())
 lt =    ''.join(lat.split())
-log =    open(f"{lt}.txt",'w')
 NAME =    []
 DB = {}
 B = 0
@@ -37,7 +36,7 @@ def vote():
          if ASK ==    "y":
              vote()
          elif ASK ==    "n":
-             
+             touch(f"{root}/log/{lt}.txt")
              exit()
          elif ASK ==    "key":
              print(DB)
