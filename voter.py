@@ -1,6 +1,27 @@
+import os
+import time
+def touch(path):
+    with open(path, 'w'):
+        os.write(DB)
+#print(os.getcwd())
+#print(os.listdir())
+sec =    time.time()
+lt =    time.ctime(sec).upper()
+root =    os.getcwd()
+check =   os.path.exists(f"{root}/log")
+#print(check)
+if check ==    True:
+    os.chdir(f"{root}/log")
+else:
+    os.mkdir(f"{root}/log")
+    os.chdir(f"{root}/log")
+#print(os.getcwd())
+#print(os.listdir())
+log =    open(f"{lt}.txt",'w')
 NAME =    []
 DB = {}
 B = 0
+print(lt)
 def vote():
          
          print(f"candidate list {NAME}")
@@ -15,6 +36,7 @@ def vote():
          if ASK ==    "y":
              vote()
          elif ASK ==    "n":
+             
              exit()
          elif ASK ==    "key":
              print(DB)
