@@ -6,7 +6,7 @@ def touch(path):
 #print(os.getcwd())
 #print(os.listdir())
 sec =    time.time()
-lt =    time.ctime(sec).upper()
+lat =    time.ctime(sec).upper()
 root =    os.getcwd()
 check =   os.path.exists(f"{root}/log")
 #print(check)
@@ -17,6 +17,7 @@ else:
     os.chdir(f"{root}/log")
 #print(os.getcwd())
 #print(os.listdir())
+lt =    ''.join(lat.split())
 log =    open(f"{lt}.txt",'w')
 NAME =    []
 DB = {}
